@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Stock Portfolio Suggestion Engine</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    </head>
+    <marquee behaviour= "alternate" scrollamount="11">
+        <h5>A(Agilent Technologies), AAPL(Apple Inc), BRK.A(Berkshire Hathaway (class A shares)) C(Citigroup), GOOG(Alphabet Inc.), WMT(Walmart), HOG(Harley-Davidson Inc.) , HPQ(Hewlett-Packard), INTC(Intel)</h5>
+    </marquee>
+
+    <body>
+
+
+   <div  style="height:800px;font-size:26px; position: absolute; " class="intro">
+<!-- Introduction -->
+<h4>Stock Portfolio Suggestion Engine</h4>
+<br>
+<br>
+    <!-- Form Object [ action="/submit" when form is submitted - POST request ] -->
+    <form method="POST" action="/submit">
+        <div class="form-group">
+
+            <!-- User Inputs -->
+
+            <!-- Investment Amount (minimum of $5000 USD) -->
+            <label for="inv_amt">Amount (in $)</label>
+            <input type="number" id="inv_amt" name="inv_amt" placeholder="0.00" min="5000" max="100000000" style="margin-left: 4.5%" required>
+            <br>
+
+
+            <!-- Investment Strategy #1. Drop-down list.-->
+            <label id="lab">Strategy 1:</label>
+            <select class="customSelect" name="strategy1" required>
+                <option disabled selected value> -- select an option -- </option>
+                <option value="Ethical Investing">Ethical Investing</option>
+                <option value="Growth Investing">Growth Investing</option>
+                <option value="Index Investing">Index Investing</option>
+                <option value="Quality Investing">Quality Investing</option>
+                <option value="Value Investing">Value Investing</option>
+            </select>
+            <br>
+            <!-- Investment Strategy #2. Drop-down list. -->
+            <label id="lab">Strategy 2:</label>
+            <select class="customSelect" name="strategy2" required>
+                <option disabled selected value> -- select an option -- </option>
+                <option value="Ethical Investing">Ethical Investing</option>
+                <option value="Growth Investing">Growth Investing</option>
+                <option value="Index Investing">Index Investing</option>
+                <option value="Quality Investing">Quality Investing</option>
+                <option value="Value Investing">Value Investing</option>
+                <option value="None">N/A</option>
+            </select>
+
+        </div>
+
+      <!-- Bootstrap Submit Button -->
+      <input type="submit" value="Submit" class="btn btn-info" style="margin-left: 25%; margin-top: 5%; width: 15%; height: 20%;">
+
+
+    </form>
+  </div>
+    <div class="parallax"></div>
+
+
+
+
+
+   <div class="last">
+      <p style="color: white;font-size:20px;" align="center";><u>Contact us</u></p>
+      <a href="https://www.linkedin.com/in/dashkk/" target="_blank" class="fa fa-linkedin" style="margin-left: 40%"></a>
+      <a href="https://github.com/DashKalikalyan" target="_blank" class="fa fa-github" ></a>
+      <a href="mailto:prateek.sharma01@sjsu.edu?" class="fa fa-envelope" ></a>
+         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+       <p align="center" style="font-size: 20px; color:#fff; class="">&copy; 2018 www.sjsu.edu<p>
+
+   </div>
+
+
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+        <marquee class = "bottombar">Stock values are subjected to market risk. Please invest at your own risk.</marquee>
+    </body>
+</html>

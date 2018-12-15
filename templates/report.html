@@ -1,0 +1,124 @@
+<!-- HTML template for Stock Portfolio Suggestion Report -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity=
+            "sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <title>Report</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/report.css') }}" /> -->
+    <link rel="stylesheet" type="text/css" href="../static/stylesheets/report.css">
+</head>
+<body style="background-color: black;">
+    <br>
+    <h1 style="margin-left: 170px;"><a href="/" style="color: white;">Stock Portfolio Suggestion Report</a></h1>
+    <!-- <a href="/" class = "homepage" style="color:White" >Stock Value Prediction</a> -->
+
+    <!-- Display Report -->
+    <div style="display: flex; flex-direction: row; justify-content: space-around;">
+            <div style="margin-left: 5%">
+        <h3 style="color: white;">Investment Strategy 1: {{strategy1}}</h3>
+
+        <br><br>
+
+        <!-- Stock 1 -->
+        <div class="stock">
+            <p><b>Stock 1: {{stock_name1[0]}}</b></p>
+            <p>Investment Amount Suggestion: ${{amt1}}</p>
+            <p>Current Date: {{current_date1[0]}}</p>
+            <p>Current Price: ${{current_price1[0]}}</p>
+            <p>Price Change: {{price_change1[0]}}</p>
+            <p>Percent Change: {{percent_change1[0]}}%</p>
+        </div>
+
+        <!-- Stock 2 -->
+        <div class="stock">
+            <p ><b>Stock 2: {{stock_name1[1]}}</b></p>
+            <p>Investment Amount Suggestion: ${{amt2}}</p>
+            <p>Current Date: {{current_date1[1]}}</p>
+            <p>Current Price: ${{current_price1[1]}}</p>
+            <p>Price Change: {{price_change1[1]}}</p>
+            <p>Percent Change: {{percent_change1[1]}}%</p>
+        </div>
+
+        <!-- Stock 3 -->
+        <div class="stock">
+            <p><b>Stock 3: {{stock_name1[2]}}</b></p>
+            <p>Investment Amount Suggestion: ${{amt3}}</p>
+            <p>Current Date: {{current_date1[2]}}</p>
+            <p>Current Price: ${{current_price1[2]}}</p>
+            <p>Price Change: {{price_change1[2]}}</p>
+            <p>Percent Change: {{percent_change1[2]}}%</p>
+        </div>
+
+    </div>
+
+
+
+    <div style="margin-left: 5%">
+        <!-- Investment Strategy 2 -->
+        <h3 style="color: white;">Investment Strategy 2: {{strategy2}}</h3>
+
+        <br><br>
+
+        <!-- Stock 1 -->
+        <div class="stock">
+            <p><b>Stock 1: {{stock_name2[0]}}</b></p>
+            <p>Investment Amount Suggestion: ${{amt1}}</p>
+            <p>Current Date: {{current_date2[0]}}</p>
+            <p>Current Price: ${{current_price2[0]}}</p>
+            <p>Price Change: {{price_change2[0]}}</p>
+            <p>Percent Change: {{percent_change2[0]}}%</p>
+        </div>
+
+
+        <!-- Stock 2 -->
+        <div class="stock">
+            <p><b>Stock 2: {{stock_name2[1]}}</b></p>
+            <p>Investment Amount Suggestion: ${{amt2}}</p>
+            <p>Current Date: {{current_date2[1]}}</p>
+            <p>Current Price: ${{current_price2[1]}}</p>
+            <p>Price Change: {{price_change2[1]}}</p>
+            <p>Percent Change: {{percent_change2[1]}}%</p>
+        </div>
+
+
+        <!-- Stock 3 -->
+        <div class="stock">
+            <p><b>Stock 3: {{stock_name2[2]}}</b></p>
+            <p>Investment Amount Suggestion: ${{amt3}}</p>
+            <p>Current Date: {{current_date2[2]}}</p>
+            <p>Current Price: ${{current_price2[2]}}</p>
+            <p>Price Change: {{price_change2[2]}}</p>
+            <p>Percent Change: {{percent_change2[2]}}%</p>
+        </div>
+
+    </div>
+    </div>
+    <!-- Investment Strategy 1 -->
+
+    <div style="margin-top: 10%;">
+        
+    </div>
+
+    <div ><marquee style="margin-top: 5%;">
+
+    </marquee>
+    <marquee direction = "right">
+    </marquee>
+</div>
+
+    <!-- Javascript to display second investment strategy is one was specified -->
+    <script>
+        var check = {{two_strategies}};
+        if (check == 1)
+        {
+            document.getElementById("second_strategy").style.visibility="visible";
+        }
+    </script>
+
+</body>
+</html>
